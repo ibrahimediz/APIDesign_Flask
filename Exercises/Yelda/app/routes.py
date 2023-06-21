@@ -22,8 +22,14 @@ def index():
         }
     ]
     return render_template("index.html",title=baslik,unit=altBaslik, kediIrklari=kediIrklari)
-    
-    kittens = [
+
+
+###################################################################
+
+kittens = [
+    {
+    "altBaslik":"Kedi Irkları",
+    "kediIrklari":[
         {"irk":{"isim":"Ankara Kedisi"},
          "ozellik":"sdfasdfasdf"
         },
@@ -36,7 +42,17 @@ def index():
         {"irk":{"isim":"Persian"},
          "ozellik":"cvxcvnxcv"
         }
-    ]
+    ]}]
 @app.get("/kittens")
 def kediIrklari_getir():
     return {"kittens":kittens}
+
+
+###################################################################
+from flask import request ####################
+@app.post("/kittens")
+def kittenOlustur():
+    request_veri = request.get_json()
+    yeni_kitten = {"altBaslik":request_veri["altBaslik"],"kediIrklari":[]}
+    kittens.append(yeni_kitten)
+    return yeni_kitten,201

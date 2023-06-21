@@ -36,3 +36,12 @@ animals = [
 @app.get("/animals")
 def katalog_getir():
     return {"animals":animals}
+
+from flask import request ####################
+@app.post("/animals")
+def katalogolustur():
+    request_veri = request.get_json()
+    yeni_katalog = {"variety":request_veri["variety"],"color":[]}
+    animals.append(yeni_katalog)
+    return yeni_katalog,201    
+

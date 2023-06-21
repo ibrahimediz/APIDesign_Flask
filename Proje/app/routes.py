@@ -21,6 +21,8 @@ def index():
 GET 127.0.0.1:4530/birimadi {"birim":"Yapay Zeka"}
 POST 127.0.0.1:4530/birimadi {"birim":"Network","egitimler":[]}
 """
+
+
 katalog = [
     {
     "birim":"Yapay Zeka",
@@ -29,6 +31,15 @@ katalog = [
         "egitim":"Machine Learning",
         "sure":30
         }]}]
+
 @app.get("/katalog")
 def katalog_getir():
     return {"katalog":katalog}
+
+from flask import request ####################
+@app.post("/katalog")
+def katalogolustur():
+    request_veri = request.get_json()
+    yeni_katalog = {"birim":request_veri["birim"],"egitimler":[]}
+    katalog.append(yeni_katalog)
+    return yeni_katalog,201

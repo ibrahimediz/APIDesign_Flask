@@ -1,5 +1,5 @@
 from app import app
-from flask import render_template
+from flask import render_template, jsonify
 
 counter = 0
 routes = [
@@ -23,5 +23,21 @@ def others():
 users = [{"_id": 1, "name": "ali"},{"_id": 2, "name": "veli"},{"_id": 3, "name": "ahmet"},{"_id": 4, "name": "cem"},{"_id": 5, "name": "mert"}]
 @app.get("/users/<id>")
 def getUserById(id):
-    print(type(id))
-    return filter(lambda user: item['_id'] == id, users)
+    user = [*filter(lambda user: str(user["_id"]) == id, users)]
+    if user:
+        return jsonify(user[0])
+    else:
+        return jsonify({"Status Code": "404", "Message": "User Not Found"})
+
+@app.put("/users/<id>")
+def updateUserById(id):
+    user = [*filter(lambda user: str(user["_id"]) == id, users)]
+    newUserData =  request.get_json()
+    if (newUserData and newUserData["name"]):
+        if user:
+            print("found user, update the list")
+            return jsonify(user[0])
+        else:
+            return jsonify({"Status Code": "404", "Message": "User Not Found"})
+    else:
+        return jsonify({"Status Code": "400", "Message": "Bad Request"})
