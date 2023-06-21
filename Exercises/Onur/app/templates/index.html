@@ -1,0 +1,15 @@
+<html>
+    <head>
+        <title>Hello World</title>
+    </head>
+    <body>
+        <h1>Welcome!</h1>
+        <p>You are our {{counter}}th visitor today.</p>
+        <p></p>
+        <ul>
+            {% for route in routes%}
+            <li><a href={{route.path}}> {{route.title}}</a></li>
+            {% endfor %}
+        </ul>
+    </body>
+</html>

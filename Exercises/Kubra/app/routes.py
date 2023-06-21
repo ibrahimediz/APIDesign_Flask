@@ -1,6 +1,17 @@
 from app import app
+from flask import render_template
 
 @app.route("/")
 @app.route("/index")
 def index():
-    return "Merhaba"
+    baslik="Markalar"
+    birim={"birim":"Kozmetik"}
+    parfum = [
+        {"marka":{"markaAdi":"Yves Saint Laurent"},
+        "parfumAdi":"Libre"
+        },
+        {"marka":{"markaAdi":"Burberry"},
+        "parfumAdi":"Her"
+        }
+    ]
+    return render_template("index.html")

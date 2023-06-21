@@ -1,4 +1,4 @@
-FLASK_APP=Elifnaz/runwebElifnaz.py
+FLASK_APP=runwebElifnaz.py
 FLASK_DEBUG=True
 FLASK_RUN_PORT=4620
 FLASK_RUN_HOST="127.0.0.1"

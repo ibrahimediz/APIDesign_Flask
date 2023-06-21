@@ -1,23 +1,18 @@
 from app import app
+from flask import render_template
 
-port = 30001
 counter = 0
+routes = [{"path": "index", "title": "Home Page"}, {"path": "about", "title": "About"}, {"path": "support", "title": "Contact Us"}]
 
 @app.route("/")
 @app.route("/index")
 def index():
     global counter
     counter += 1
-    print(counter)
-    return """
-    <html>
-        <head>
-            <title>Hello World</title>
-        </head>
-        <body>
-            <h1>Welcome!</h1>
-            <p>You are our {}th visitor today.</p>
-        </body>
-    </html>
-    """.format(counter)
-    # return "Hello World!\nYou are our " + str(counter) + "th visitor today."
+    return render_template('index.html', counter=counter, routes=routes)
+
+
+@app.route("/about")
+@app.route("/support")
+def others():
+    return render_template('others.html')
