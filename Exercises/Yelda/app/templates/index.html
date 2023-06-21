@@ -10,5 +10,11 @@
 </head>
 <body>
     <h1>{{unit.altBaslik}}</h1>
+    <div><p>
+        {% for irklar in kediIrklari %}
+        <h3>{{irklar.irk.isim}}</h3>
+        <h5>{{irklar.ozellik}}</h5>
+        {% endfor%}
+    </div>
 </body>
 </html>

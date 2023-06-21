@@ -6,7 +6,7 @@ from flask import render_template
 def index():
     baslik = "Ege Ekmekcioglu"
     birimAdi = {"birim": "Ekonomi"}
-    egitimler = [
+    isimler = [
         {"İktisatci": {"ismi": "Milton"},
             "alan": "Kamu Ekonomi"
         },
@@ -17,4 +17,4 @@ def index():
             "alan": "Karsilastirmali Ekonomi"
         }
     ]
-    return render_template("index.html", title=baslik, unit=birim)
+    return render_template("index.html", title=baslik, unit=birimAdi, isimler=isimler)

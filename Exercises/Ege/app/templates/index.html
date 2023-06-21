@@ -12,5 +12,12 @@
     <h1>
         {{unit.birim}}
     </h1>
+    <div><p>
+        {% for isim in isimler%}
+            <h3> {{isim.İktisatci.ismi}} <h3>
+            <h5> {{isim.alan}}
+        {% endfor %}
+
+
 </body>
 </html>

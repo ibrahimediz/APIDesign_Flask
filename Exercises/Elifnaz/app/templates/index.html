@@ -10,5 +10,11 @@
 </head>
 <body>
     <h1>{{unit.birim}}</h1> 
+    <div><p>
+        {% for divi in herhangi %}
+            <h3>{{divi.div.divadi}}</h3>
+            <h5>{{divi.alan}}
+        {% endfor %}
+    </div>
 </body>
 </html>

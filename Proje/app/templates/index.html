@@ -12,5 +12,11 @@
     <h1>
         {{unit.birim}}
     </h1>
+    <div><p>
+        {% for egitim in egitimler %}
+            <h3>{{egitim.egitmen.egitmenAdi}}</h3>
+            <h5>{{egitim.alan}}
+        {% endfor %}
+    </div>
 </body>
 </html>

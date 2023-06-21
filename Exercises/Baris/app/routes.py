@@ -4,7 +4,7 @@ from flask import render_template
 @app.route("/index")
 def index():
     baslik="Petstore"
-    birim={"birim":"Doge"}
+    birim={"birim":"animal"}
     egitimler = [
         {"animal":{"variety":"golden"},
         "color":"dark brown"
@@ -22,5 +22,5 @@ def index():
         "color":"brown"
         }
     ]
-    tarih = date.today()
-    return render_template("index.html",title="",unit=variety,tarih)
+    
+    return render_template("index.html",title="",unit=birim)

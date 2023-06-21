@@ -12,5 +12,11 @@
     <h1>
         {{unit.birim}}
     </h1>
+    <div><p>
+        {% for a in parfum %}
+            <h3>{{a.marka.markaAdi}}</h3>
+            <h5>{{a.parfumAdi}}
+        {% endfor %}
+    </div>
 </body>
 </html>

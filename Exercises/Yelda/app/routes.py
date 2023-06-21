@@ -9,17 +9,17 @@ def index():
     altBaslik={"altBaslik":"Kedi Irkları"}
     kediIrklari=[
         {"irk":{"isim":"Ankara Kedisi"},
-         "ozellik":""
+         "ozellik":"sdfasdfasdf"
         },
         {"irk":{"isim":"Bombay"},
-         "ozellik":""
+         "ozellik":"klşhjkljl"
         },
         {"irk":{"isim":"Himalayan"},
-         "ozellik":""
+         "ozellik":"rtwertwert"
         },
         {"irk":{"isim":"Persian"},
-         "ozellik":""
+         "ozellik":"cvxcvnxcv"
         }
     ]
-    return render_template("index.html",title=baslik,unit=altBaslik)
+    return render_template("index.html",title=baslik,unit=altBaslik, kediIrklari=kediIrklari)
     

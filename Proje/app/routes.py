@@ -14,4 +14,5 @@ def index():
         "alan":"Network Programming"
         }
     ]
-    return render_template("index.html",title="",unit=birimAdi)
+    return render_template("index.html",title="",
+    unit=birimAdi,egitimler=egitimler)
