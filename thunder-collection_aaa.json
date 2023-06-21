@@ -1,0 +1,169 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "aaa",
+    "dateExported": "2023-06-21T12:50:59.157Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "d2e8cb8c-b204-4baf-b548-f41d6dcdb8af",
+            "colId": "298e029b-bfc4-48aa-b410-3c86355038cd",
+            "containerId": "",
+            "name": "127.0.0.1:4533/katalog POST Katalog",
+            "url": "127.0.0.1:4533/katalog",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2023-06-21T12:49:17.230Z",
+            "modified": "2023-06-21T12:49:17.230Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\"birim\":\"Network\"}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "5ede715b-10b8-4541-adf4-c2fe548d2c73",
+            "colId": "298e029b-bfc4-48aa-b410-3c86355038cd",
+            "containerId": "",
+            "name": "127.0.0.1:4552/katalog POST Katalog",
+            "url": "127.0.0.1:4552/katalog",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2023-06-21T12:49:33.356Z",
+            "modified": "2023-06-21T12:49:33.356Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "899de6fb-524f-4b4e-a307-4585dc27163a",
+            "colId": "298e029b-bfc4-48aa-b410-3c86355038cd",
+            "containerId": "",
+            "name": "127.0.0.1:4555/animals POST Animals",
+            "url": "127.0.0.1:4555/animals",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2023-06-21T12:49:41.634Z",
+            "modified": "2023-06-21T12:49:41.634Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\"variety\":\"Felis\"}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "16887c61-ae1f-4853-a7e8-44da8bd5456e",
+            "colId": "298e029b-bfc4-48aa-b410-3c86355038cd",
+            "containerId": "",
+            "name": "127.0.0.1:4533/katalog POST Katalog Copy",
+            "url": "127.0.0.1:4544/katalog",
+            "method": "POST",
+            "sortNum": 40000,
+            "created": "2023-06-21T12:49:47.593Z",
+            "modified": "2023-06-21T12:49:47.593Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\"birim\":\"Network\"}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "bf4ea75a-c9ba-4555-b08e-94b5679dc0da",
+            "colId": "298e029b-bfc4-48aa-b410-3c86355038cd",
+            "containerId": "",
+            "name": "127.0.0.1:4525/kittens POST kittens",
+            "url": "127.0.0.1:4525/kittens",
+            "method": "POST",
+            "sortNum": 50000,
+            "created": "2023-06-21T12:49:53.379Z",
+            "modified": "2023-06-21T12:49:53.379Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"altBaslik\":\"Kopek Irkları\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "277936ff-79e6-4818-b763-c3922e73e3f9",
+            "colId": "298e029b-bfc4-48aa-b410-3c86355038cd",
+            "containerId": "",
+            "name": "127.0.0.1:4533/katalog GET KATALOG",
+            "url": "127.0.0.1:4533/katalog",
+            "method": "GET",
+            "sortNum": 60000,
+            "created": "2023-06-21T12:49:59.390Z",
+            "modified": "2023-06-21T12:49:59.390Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "bd74fda2-b0b9-45e7-a69c-014c13f66a0e",
+            "colId": "298e029b-bfc4-48aa-b410-3c86355038cd",
+            "containerId": "",
+            "name": "127.0.0.1:4555/animals GET Animals",
+            "url": "127.0.0.1:4555/animals",
+            "method": "GET",
+            "sortNum": 70000,
+            "created": "2023-06-21T12:50:05.187Z",
+            "modified": "2023-06-21T12:50:05.187Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "0d074a4e-74e5-4a44-975f-bea719aff843",
+            "colId": "298e029b-bfc4-48aa-b410-3c86355038cd",
+            "containerId": "",
+            "name": "127.0.0.1:4552/katalog GET Katalog",
+            "url": "127.0.0.1:4552/katalog",
+            "method": "GET",
+            "sortNum": 80000,
+            "created": "2023-06-21T12:50:10.281Z",
+            "modified": "2023-06-21T12:50:10.281Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "1f8a4f84-b210-4b74-8655-2b69b2393169",
+            "colId": "298e029b-bfc4-48aa-b410-3c86355038cd",
+            "containerId": "",
+            "name": "127.0.0.1:4544/katalog GET Katalog",
+            "url": "127.0.0.1:4544/katalog",
+            "method": "GET",
+            "sortNum": 90000,
+            "created": "2023-06-21T12:50:15.645Z",
+            "modified": "2023-06-21T12:50:15.645Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "14b50f12-cda3-4ccc-a9df-003e032993c7",
+            "colId": "298e029b-bfc4-48aa-b410-3c86355038cd",
+            "containerId": "",
+            "name": "127.0.0.1:4544/kittens GET Kittens",
+            "url": "127.0.0.1:4525/kittens",
+            "method": "GET",
+            "sortNum": 100000,
+            "created": "2023-06-21T12:50:20.679Z",
+            "modified": "2023-06-21T12:50:20.679Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}
