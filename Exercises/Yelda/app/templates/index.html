@@ -1,11 +1,14 @@
 <html>
 <head>
     <title>
-    {}    
+    {% if title %}    
         {{title}}
+    {% else %}
+        Hoş geldiniz
+    {% endif %}
     </title>
 </head>
 <body>
-    <h1>{{unit.birim}}</h1>
+    <h1>{{unit.altBaslik}}</h1>
 </body>
 </html>

@@ -21,4 +21,5 @@ def index():
          "ozellik":""
         }
     ]
-    return render_template("index.html")
+    return render_template("index.html",title=baslik,unit=altBaslik)
+    

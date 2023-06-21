@@ -3,8 +3,8 @@ from flask import render_template
 @app.route("/")
 @app.route("/index")
 def index():
-    baslik="Dijital Vizyon"
-    birim={"birim":"Yapay Zeka"}
+    baslik="Petstore"
+    birim={"birim":"Doge"}
     egitimler = [
         {"animal":{"variety":"golden"},
         "color":"dark brown"
@@ -22,4 +22,5 @@ def index():
         "color":"brown"
         }
     ]
-    return render_template("index.html")
+    tarih = date.today()
+    return render_template("index.html",title="",unit=variety,tarih)

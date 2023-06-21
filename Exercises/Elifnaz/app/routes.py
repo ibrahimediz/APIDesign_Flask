@@ -15,4 +15,4 @@ def index():
         "alan":"testing123"
         }
     ]
-    return render_template("index.html", title=baslik, unit=birim12)
+    return render_template("index.html", title="", unit=birim12)

@@ -14,4 +14,4 @@ def index():
         "parfumAdi":"Her"
         }
     ]
-    return render_template("index.html")
+    return render_template("index.html",title=baslik,unit=birim)

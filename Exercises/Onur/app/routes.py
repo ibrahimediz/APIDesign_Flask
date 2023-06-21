@@ -2,7 +2,10 @@ from app import app
 from flask import render_template
 
 counter = 0
-routes = [{"path": "index", "title": "Home Page"}, {"path": "about", "title": "About"}, {"path": "support", "title": "Contact Us"}]
+routes = [
+    {"path": "index", "title": "Home Page"}, 
+{"path": "about", "title": "About"}, 
+{"path": "support", "title": "Contact Us"}]
 
 @app.route("/")
 @app.route("/index")
