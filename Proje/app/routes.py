@@ -16,3 +16,5 @@ def index():
     ]
     return render_template("index.html",title="",
     unit=birimAdi,egitimler=egitimler)
+
+
