@@ -17,4 +17,18 @@ def index():
     return render_template("index.html",title="",
     unit=birimAdi,egitimler=egitimler)
 
-
+"""
+GET 127.0.0.1:4530/birimadi {"birim":"Yapay Zeka"}
+POST 127.0.0.1:4530/birimadi {"birim":"Network","egitimler":[]}
+"""
+katalog = [
+    {
+    "birim":"Yapay Zeka",
+    "egitimler":[
+        {
+        "egitim":"Machine Learning",
+        "sure":30
+        }]}]
+@app.get("/katalog")
+def katalog_getir():
+    return {"katalog":katalog}

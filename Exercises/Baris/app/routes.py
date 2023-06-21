@@ -4,8 +4,8 @@ from flask import render_template
 @app.route("/index")
 def index():
     baslik="Petstore"
-    birim={"birim":"animal"}
-    egitimler = [
+    birim={"birim":"animals"}
+    animals = [
         {"animal":{"variety":"golden"},
         "color":"dark brown"
         },
@@ -23,4 +23,16 @@ def index():
         }
     ]
     
-    return render_template("index.html",title="",unit=birim)
+    return render_template("index.html",title="",unit=animals,variety=variety)
+
+animals = [
+    {
+    "variety":"pitbull",
+    "color":[
+        {
+        "egitim":"brown",
+        "age":4
+        }]}]
+@app.get("/animals")
+def katalog_getir():
+    return {"animals":animals}

@@ -18,3 +18,15 @@ def index():
         }
     ]
     return render_template("index.html", title=baslik, unit=birimAdi, isimler=isimler)
+
+katalog = [
+    {
+    "birim":"Ekonomi",
+    "isimler":[
+        {
+        "isim":"Milton",
+        "sure":30
+        }]}]
+@app.get("/katalog")
+def katalog_getir():
+    return {"katalog":katalog}

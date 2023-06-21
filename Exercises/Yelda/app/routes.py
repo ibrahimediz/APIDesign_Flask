@@ -23,3 +23,20 @@ def index():
     ]
     return render_template("index.html",title=baslik,unit=altBaslik, kediIrklari=kediIrklari)
     
+    kittens = [
+        {"irk":{"isim":"Ankara Kedisi"},
+         "ozellik":"sdfasdfasdf"
+        },
+        {"irk":{"isim":"Bombay"},
+         "ozellik":"klşhjkljl"
+        },
+        {"irk":{"isim":"Himalayan"},
+         "ozellik":"rtwertwert"
+        },
+        {"irk":{"isim":"Persian"},
+         "ozellik":"cvxcvnxcv"
+        }
+    ]
+@app.get("/kittens")
+def kediIrklari_getir():
+    return {"kittens":kittens}

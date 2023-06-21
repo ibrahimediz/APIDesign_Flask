@@ -16,3 +16,19 @@ def index():
     ]
     return render_template("index.html",title=baslik,
     unit=birim,parfum=parfum)
+
+    """
+GET 127.0.0.1:4530/birimadi {"birim":"Yapay Zeka"}
+POST 127.0.0.1:4530/birimadi {"birim":"Network","egitimler":[]}
+"""
+katalog = [
+    {
+    "birim":"Kozmetik",
+    "parfum":[
+        {
+        "marka":"Yves Saint Laurent",
+        "luks":"Evet"
+        }]}]
+@app.get("/katalog")
+def katalog_getir():
+    return {"katalog":katalog}
