@@ -1,43 +1,37 @@
 from app import app
-from flask import render_template
+from app.db import *
+import uuid
+from flask import request
 
-@app.route("/")
-@app.route("/index")
+@app.get("/katalog/<string:deneme_id>")
+def getdeneme(deneme_id):
+    try:
+        return denemeler[deneme_id]
+    except KeyError:
+        return {"mesaj": "Birim bulunamadı"}, 404
 
-def index():
-    baslik="Elifnaz"
-    birim12={"birim":"test"}
-    herhangi = [
-        {"div":{"divadi":"ps"},
-        "alan":"testing"
-        },
-        {"div":{"divadi":"smaca"},
-        "alan":"testing123"
-        }
-    ]
-    return render_template("index.html", title="", unit=birim12,
-    herhangi=herhangi)
+@app.get("/katalog")
+def getdenemeler():
+    return {"denemeler":list.denemeler.values()}
 
-katalog = [
-    {
-    "birim":"test",
-    "herhangi":[
-        {
-        "divi":"testing",
-        "sure":30
-        }]},
-         {
-    "birim":"telelelli",
-    "herhangi":[
-        {
-        "divi":"off",
-        "sure":130
-        }]}
-        ]
+@app.post("/katalog")
+def postMakale():
+    MakaleData = request.get_json()
+    Makale_ID = uuid.uuid4().hex
+    makale = {**MakaleData,"id":Makale_ID}
+    makaleler[Makale_ID] = makale
+    return makale
+
+
+
+
+
+
 
 @app.get("/katalog")
 def katalog_getir():
-    return {"katalog":katalog}
+    return {"katalog":deneme}
+
 
 from flask import request ####################
 @app.post("/katalog")
@@ -56,4 +50,18 @@ def egitimOlustur(isim):
             kat["herhangi"].append(yeni)
             return yeni,201
     return {"mesaj":"Katalog Bulunamadı"}, 404
-            
+
+@app.get("/katalog/<string:isim>")
+def birimGetir(isim):
+    for kat in katalog:
+        if kat["birim"] == isim:
+            return kat
+    return {"mesaj":"Katalog Bulunamadı"}, 404
+
+
+@app.get("/katalog/<string:isim>/herhangi")
+def egitimlerGetir(isim):
+    for kat in katalog:
+        if kat["birim"] == isim:
+            return {"herhangi":kat["herhangi"]}
+    return {"mesaj":"Katalog Bulunamadı"}, 404

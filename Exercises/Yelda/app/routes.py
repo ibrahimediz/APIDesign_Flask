@@ -58,7 +58,7 @@ def irkOlustur():
     return yeni_irk,201
 
 ############################################################
-@app.post("/irklar/<string:isim>/kediIrklari") # 127:0.0.1:5000/katalog/Network/egitimler
+@app.get("/irklar/<string:isim>/kediIrklari") # 127:0.0.1:5000/katalog/Network/egitimler
 def irkEkle(isim):
     request_veri = request.get_json()
     for irkList in irklar:

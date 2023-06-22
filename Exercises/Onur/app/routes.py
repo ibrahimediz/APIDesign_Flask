@@ -1,12 +1,9 @@
 from app import app
+from app.db import *
 from flask import render_template, jsonify, request
 import uuid
 
 counter = 0
-routes = [
-    {"path": "index", "title": "Home Page"}, 
-{"path": "about", "title": "About"}, 
-{"path": "support", "title": "Contact Us"}]
 
 @app.route("/")
 @app.route("/index")
@@ -20,8 +17,6 @@ def index():
 @app.route("/support")
 def others():
     return render_template('others.html')
-
-users = [{"_id": 1, "name": "ali"},{"_id": 2, "name": "veli"},{"_id": 3, "name": "ahmet"},{"_id": 4, "name": "cem"},{"_id": 5, "name": "mert"}]
 
 @app.get("/users")
 def getUsers():

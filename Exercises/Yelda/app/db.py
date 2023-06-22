@@ -1,0 +1,4 @@
+arabalar = {}
+modeller = {
+
+}

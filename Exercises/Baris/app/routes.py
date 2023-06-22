@@ -55,6 +55,24 @@ def katalogolustur():
     animals.append(yeni_katalog)
     return yeni_katalog,201    
 
+@app.post("/animals")
+def postAnimals():
+    animalData = request.get_json()
+    animal_ID = uuid.uuid4().hex
+    animal = {**animalData,"id":animal_ID}
+    animals[animal_ID] = animal
+    return animal
+
+@app.post("/variety")
+def postVariety():
+    varietyData = request.get_json()
+    if varietyData["birim_id"] not in stores:
+        return {"mesaj":"Birim Bulunamadı"} , 404
+    varietyID = uuid.uuid4().hex
+    egitim = {**varietyData,"id":varietyID}
+    varities[varietyID] = variety
+    return variety
+
 @app.post("/animals/<string:isim>")
 def createAnimal(isim):
     request_veri = request.get_json()

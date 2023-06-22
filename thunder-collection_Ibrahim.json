@@ -1,20 +1,20 @@
 {
     "client": "Thunder Client",
     "collectionName": "Ibrahim",
-    "dateExported": "2023-06-22T07:48:04.753Z",
+    "dateExported": "2023-06-22T11:11:02.673Z",
     "version": "1.1",
     "folders": [],
     "requests": [
         {
-            "_id": "59a4dfb0-71a5-4b37-ad77-791962285620",
-            "colId": "a7bb5b2c-4d58-45b8-a85f-1e4718be2b8d",
+            "_id": "0fe644f3-a94e-45c2-888b-1964ba518d0d",
+            "colId": "5a73f46a-797b-464b-bf8b-2b0db07e405a",
             "containerId": "",
             "name": "İbrahim Katalog POST",
-            "url": "http://127.0.0.1:4533/katalog",
+            "url": "http://127.0.0.1:5000/katalog",
             "method": "POST",
             "sortNum": 10000,
-            "created": "2023-06-22T07:37:30.353Z",
-            "modified": "2023-06-22T07:37:30.353Z",
+            "created": "2023-06-22T10:20:53.992Z",
+            "modified": "2023-06-22T10:44:38.006Z",
             "headers": [],
             "params": [],
             "body": {
@@ -25,29 +25,29 @@
             "tests": []
         },
         {
-            "_id": "6474a7ba-a5fa-452d-9705-3885e1d01dd2",
-            "colId": "a7bb5b2c-4d58-45b8-a85f-1e4718be2b8d",
+            "_id": "7357377c-7b6f-403d-8367-8b3e39754dae",
+            "colId": "5a73f46a-797b-464b-bf8b-2b0db07e405a",
             "containerId": "",
             "name": "İbrahim Katalog GET",
-            "url": "http://127.0.0.1:4533/katalog",
+            "url": "http://127.0.0.1:5000/katalog",
             "method": "GET",
             "sortNum": 20000,
-            "created": "2023-06-22T07:37:30.354Z",
-            "modified": "2023-06-22T07:37:30.354Z",
+            "created": "2023-06-22T10:20:53.993Z",
+            "modified": "2023-06-22T10:21:14.722Z",
             "headers": [],
             "params": [],
             "tests": []
         },
         {
-            "_id": "d7df3cc9-cf2e-4ab2-9ccb-05d6dcb7247e",
-            "colId": "a7bb5b2c-4d58-45b8-a85f-1e4718be2b8d",
+            "_id": "079b5fec-cbe0-4c93-bb13-02b5645cbd0b",
+            "colId": "5a73f46a-797b-464b-bf8b-2b0db07e405a",
             "containerId": "",
             "name": "İbrahim Katalog  Birim GET",
-            "url": "http://127.0.0.1:4533/katalog/Java",
+            "url": "http://127.0.0.1:5000/egitim/342419c046054bdf8904e6323899ce9b",
             "method": "GET",
             "sortNum": 30000,
-            "created": "2023-06-22T07:46:22.060Z",
-            "modified": "2023-06-22T07:46:22.060Z",
+            "created": "2023-06-22T10:20:53.994Z",
+            "modified": "2023-06-22T11:10:46.763Z",
             "headers": [
                 {
                     "name": "User-Agent",
@@ -64,15 +64,15 @@
             "tests": []
         },
         {
-            "_id": "77cedc58-2a4e-4bff-90c2-8bcac71c4725",
-            "colId": "a7bb5b2c-4d58-45b8-a85f-1e4718be2b8d",
+            "_id": "3deed672-3d7e-4a53-a346-2240545e9c0e",
+            "colId": "5a73f46a-797b-464b-bf8b-2b0db07e405a",
             "containerId": "",
             "name": "İbrahim Katalog  Birim Eğitimler  GET",
-            "url": "http://127.0.0.1:4533/katalog/Java/egitimler",
+            "url": "http://127.0.0.1:5000/egitim",
             "method": "GET",
             "sortNum": 40000,
-            "created": "2023-06-22T07:46:39.961Z",
-            "modified": "2023-06-22T07:46:39.961Z",
+            "created": "2023-06-22T10:20:53.995Z",
+            "modified": "2023-06-22T11:10:29.907Z",
             "headers": [
                 {
                     "name": "User-Agent",
@@ -89,20 +89,20 @@
             "tests": []
         },
         {
-            "_id": "66a33c6b-a7c1-4244-8ed4-cb2f392a1a27",
-            "colId": "a7bb5b2c-4d58-45b8-a85f-1e4718be2b8d",
+            "_id": "3999aed9-41a0-4ca9-bd6f-9910ede0c0fb",
+            "colId": "5a73f46a-797b-464b-bf8b-2b0db07e405a",
             "containerId": "",
             "name": "İbrahim Eğitimler POST",
-            "url": "http://127.0.0.1:4533/Network/",
+            "url": "http://127.0.0.1:5000/egitim",
             "method": "POST",
             "sortNum": 50000,
-            "created": "2023-06-22T07:47:59.813Z",
-            "modified": "2023-06-22T07:47:59.813Z",
+            "created": "2023-06-22T10:20:53.996Z",
+            "modified": "2023-06-22T11:09:50.902Z",
             "headers": [],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"egitim\":\"CCNA\",\n  \"sure\":150\n}",
+                "raw": "{\n  \"birim_id\":\"eefec04e1a264624a6ba60361178214a\",\n  \"egitim\":\"CCNA\",\n  \"sure\":150\n}",
                 "form": []
             },
             "tests": []
