@@ -1,0 +1,75 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "onur-rest-service-python-app",
+    "dateExported": "2023-06-22T07:33:33.870Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "bac02188-b91e-47e6-9ef7-c7c770095618",
+            "colId": "984de175-dcc4-4519-9c66-031eb2863294",
+            "containerId": "",
+            "name": "getUsers",
+            "url": "http://localhost:30001/users",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2023-06-22T07:26:11.294Z",
+            "modified": "2023-06-22T07:26:37.266Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "107adecb-b956-4d7f-869d-65b06ad909e4",
+            "colId": "984de175-dcc4-4519-9c66-031eb2863294",
+            "containerId": "",
+            "name": "getUserById",
+            "url": "http://localhost:30001/users/3",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2023-06-22T07:26:26.614Z",
+            "modified": "2023-06-22T07:30:50.196Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "7d5ac39d-2bea-4482-a979-25a6ecbe1af8",
+            "colId": "984de175-dcc4-4519-9c66-031eb2863294",
+            "containerId": "",
+            "name": "updateUserById",
+            "url": "http://localhost:30001/users/3",
+            "method": "PUT",
+            "sortNum": 30000,
+            "created": "2023-06-22T07:27:16.801Z",
+            "modified": "2023-06-22T07:30:41.254Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{ \"name\": \"Ahmet\" }",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "bc99c281-a667-4787-83f6-ef9e405ecbc3",
+            "colId": "984de175-dcc4-4519-9c66-031eb2863294",
+            "containerId": "",
+            "name": "createUser",
+            "url": "http://localhost:30001/users",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2023-06-22T07:29:11.580Z",
+            "modified": "2023-06-22T07:30:27.911Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{ \"name\": \"Onur\" }",
+                "form": []
+            },
+            "tests": []
+        }
+    ]
+}

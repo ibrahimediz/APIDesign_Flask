@@ -26,13 +26,23 @@ def index():
     return render_template("index.html",title="",unit=animals,variety=variety)
 
 animals = [
-    {
-    "variety":"pitbull",
-    "color":[
-        {
-        "egitim":"brown",
-        "age":4
-        }]}]
+        {"animal":{"variety":"golden"},
+        "color":"dark brown"
+        },
+        {"animal":{"variety":"bulldog"},
+        "color":"black"
+        },
+        {"animal":{"variety":"terrier"},
+        "color":"white"
+        },
+        {"animal":{"variety":"pitbull"},
+        "color":"white"
+        },
+        {"animal":{"variety":"spaniel"},
+        "color":"brown"
+        }
+    ]
+
 @app.get("/animals")
 def katalog_getir():
     return {"animals":animals}
@@ -45,3 +55,12 @@ def katalogolustur():
     animals.append(yeni_katalog)
     return yeni_katalog,201    
 
+@app.post("/animals/<string:isim>")
+def createAnimal(isim):
+    request_veri = request.get_json()
+    for i in animals:
+        if i["animals"] == isim:
+            new_animal = {"variety":request_veri["variety"],"color":request_veri["color"]}
+            kat["animals"].append(new_animal)
+            return new_animal,201,
+    return {"mesaj":"Katalog Bulunamadı"}, 404

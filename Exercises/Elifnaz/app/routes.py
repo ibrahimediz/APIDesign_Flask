@@ -25,7 +25,15 @@ katalog = [
         {
         "divi":"testing",
         "sure":30
-        }]}]
+        }]},
+         {
+    "birim":"telelelli",
+    "herhangi":[
+        {
+        "divi":"off",
+        "sure":130
+        }]}
+        ]
 
 @app.get("/katalog")
 def katalog_getir():
@@ -39,9 +47,13 @@ def katalogolustur():
     katalog.append(yeni_katalog)
     return yeni_katalog,201
 
-@app.post("/katalog/<string:isim>/herhangi")
-def herhangiOlustur(isim):
+@app.post("/katalog/<string:isim>/herhangi") # 127:0.0.1:4620/katalog/Network/egitimler
+def egitimOlustur(isim):
     request_veri = request.get_json()
     for kat in katalog:
         if kat["birim"] == isim:
+            yeni = {"divi":request_veri["divi"],"sure":request_veri["sure"]}
+            kat["herhangi"].append(yeni)
+            return yeni,201
+    return {"mesaj":"Katalog Bulunamadı"}, 404
             

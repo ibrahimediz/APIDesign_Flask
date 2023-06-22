@@ -34,10 +34,22 @@ def katalog_getir():
     return {"katalog":katalog}
 
 
+#from flask import request ####################
+#@app.post("/katalog")
+#def katalogolustur():
+#    request_veri = request.get_json()
+#    yeni_katalog = {"birim":request_veri["birim"],"parfum":[]}
+#    katalog.append(yeni_katalog)
+#    return yeni_katalog,201
+
 from flask import request ####################
-@app.post("/katalog")
-def katalogolustur():
+@app.post("/katalog/<string:isim>/parfum") # 127:0.0.1:5000/katalog/Network/parfum
+def markaOlustur(isim):
     request_veri = request.get_json()
-    yeni_katalog = {"birim":request_veri["birim"],"parfum":[]}
-    katalog.append(yeni_katalog)
-    return yeni_katalog,201
+    for kat in katalog:
+        if kat["birim"] == isim:
+            yeni_marka = {"marka":request_veri["marka"],"luks":request_veri["luks"]}
+            kat["parfum"].append(yeni_marka)
+            return yeni_marka,201
+    return {"mesaj":"Katalog Bulunamadı"}, 404
+

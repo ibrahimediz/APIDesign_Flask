@@ -37,14 +37,31 @@ def katalogolustur():
     yeni_katalog = {"birim":request_veri["birim"],"egitimler":[]}
     katalog.append(yeni_katalog)
     return yeni_katalog,201
-
+    
+from markupsafe import escape
 
 @app.post("/katalog/<string:isim>/egitimler") # 127:0.0.1:5000/katalog/Network/egitimler
 def egitimOlustur(isim):
     request_veri = request.get_json()
     for kat in katalog:
-        if kat["birim"] == isim:
+        if kat["birim"] == escape(isim):
             yeni_egitim = {"egitim":request_veri["egitim"],"sure":request_veri["sure"]}
             kat["egitimler"].append(yeni_egitim)
             return yeni_egitim,201
+    return {"mesaj":"Katalog Bulunamadı"}, 404
+
+
+@app.get("/katalog/<string:isim>")
+def birimGetir(isim):
+    for kat in katalog:
+        if kat["birim"] == isim:
+            return kat
+    return {"mesaj":"Katalog Bulunamadı"}, 404
+
+
+@app.get("/katalog/<string:isim>/egitimler")
+def egitimlerGetir(isim):
+    for kat in katalog:
+        if kat["birim"] == isim:
+            return {"egitimler":kat["egitimler"]}
     return {"mesaj":"Katalog Bulunamadı"}, 404
