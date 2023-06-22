@@ -19,6 +19,7 @@ def index():
     ]
     return render_template("index.html", title=baslik, unit=birimAdi, isimler=isimler)
 
+
 katalog = [
     {
     "birim":"Ekonomi",
