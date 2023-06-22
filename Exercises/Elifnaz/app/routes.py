@@ -38,3 +38,10 @@ def katalogolustur():
     yeni_katalog = {"birim":request_veri["birim"],"herhangi":[]}
     katalog.append(yeni_katalog)
     return yeni_katalog,201
+
+@app.post("/katalog/<string:isim>/herhangi")
+def herhangiOlustur(isim):
+    request_veri = request.get_json()
+    for kat in katalog:
+        if kat["birim"] == isim:
+            
